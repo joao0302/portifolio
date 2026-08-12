@@ -1,6 +1,7 @@
 import experience from "@/data/experience";
 import SectionTitle from "./SectionTitle";
 import RevealOnScroll from "./RevealOnScroll";
+import TechBadge from "./TechBadge";
 
 export default function Experience() {
   return (
@@ -33,11 +34,30 @@ export default function Experience() {
                   />
                   <p className="text-sm font-medium text-accent">{item.period}</p>
                   <h3 className="font-display mt-1 text-xl font-semibold text-foreground">
-                    {item.role} · {item.company}
+                    {item.role} ·{" "}
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-border underline-offset-4 transition-colors hover:decoration-accent"
+                      >
+                        {item.company}
+                      </a>
+                    ) : (
+                      item.company
+                    )}
                   </h3>
-                  <p className="mt-2 max-w-xl text-foreground-muted">
+                  <p className="mt-2 max-w-2xl whitespace-pre-line text-foreground-muted">
                     {item.description}
                   </p>
+                  {item.technologies?.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {item.technologies.map((tech) => (
+                        <TechBadge key={tech}>{tech}</TechBadge>
+                      ))}
+                    </div>
+                  )}
                 </RevealOnScroll>
               ))}
             </ol>
