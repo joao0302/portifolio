@@ -7,10 +7,10 @@ import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import links from "@/data/links";
 
 const NAV_ITEMS = [
-  { label: "Work", href: "/#work" },
-  { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Projetos", href: "/#work" },
+  { label: "Sobre", href: "/#about" },
+  { label: "Experiência", href: "/#experience" },
+  { label: "Contato", href: "/#contact" },
 ];
 
 export default function Navbar() {
