@@ -43,7 +43,6 @@ const projects = [
       {src: "/projects/vyral/relatorios.png", title: "Relatórios", description: "Relatórios automáticos com resultados e análises."},
       {src: "/projects/vyral/equipe.png", title: "Equipe", description: "Gestão de equipe e acessos da agência."},
       {src: "/projects/vyral/configuracoes.png", title: "Configurações", description: "Conta, agência, segurança e preferências."},
-      {src: "/projects/vyral/admin.png", title: "Painel admin", description: "Controle de agências, planos, trials e feedbacks do SaaS."},
     ],
     demoScreenshots: [
       {src: "/projects/vyral/dashboard.png", title: "Dashboard por cliente", description: "Resumo inteligente, crescimento e sinais importantes em uma visão executiva."},
@@ -53,7 +52,6 @@ const projects = [
       {src: "/projects/vyral/arquivos.png", title: "Biblioteca da marca", description: "Logos, fotos, fontes, paletas e identidade visual por cliente."},
       {src: "/projects/vyral/tendencias.png", title: "IA de tendências", description: "Trends brasileiras com match para o segmento do cliente."},
       {src: "/projects/vyral/relatorios.png", title: "Relatórios", description: "Entregáveis para apresentar resultados com clareza."},
-      {src: "/projects/vyral/admin.png", title: "Painel admin SaaS", description: "Visão do dono do produto para controlar agências, planos e trials."},
     ],
     youtubeId: null,
     problem:

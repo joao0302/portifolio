@@ -9,7 +9,7 @@ export default function SelectedProjects() {
         <SectionTitle
           eyebrow="Trabalho selecionado"
           title="Projetos que provam execução"
-          description="Produtos completos, com interface, dados, regras de negócio, integrações e deploy. A ideia aqui é mostrar exatamente o que um recrutador precisa ver: escopo, complexidade e entrega."
+          description="Produtos completos, com interface, dados, regras de negócio, integrações e deploy — do conceito inicial à experiência final em produção."
         />
 
         <div className="mt-12 flex flex-col gap-20 sm:mt-16 sm:gap-32">
