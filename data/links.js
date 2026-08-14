@@ -5,9 +5,9 @@
 // - email: contact e-mail address, e.g. "you@example.com"
 // - resume: URL or local path to a downloadable resume/CV PDF, e.g. "/resume.pdf"
 const links = {
-  github: null,
+  github: "https://github.com/joao0302",
   linkedin: null,
-  email: null,
+  email: "joaopauloquino@gmail.com",
   resume: null,
 };
 

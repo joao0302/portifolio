@@ -4,6 +4,8 @@ import TechBadge from "./TechBadge";
 import ScreenshotPlaceholder from "./ScreenshotPlaceholder";
 
 export default function ProjectHero({ project }) {
+  const isMobile = project.imageOrientation === "mobile";
+
   return (
     <section className="px-6 pt-16 pb-20 sm:px-8 sm:pt-24">
       <div className="mx-auto max-w-6xl">
@@ -57,10 +59,20 @@ export default function ProjectHero({ project }) {
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.15} className="mt-14">
-          <ScreenshotPlaceholder
-            label={`${project.title} — screenshot em breve`}
-            className="aspect-[16/9]"
-          />
+          {project.cover ? (
+            <div className={`overflow-hidden rounded-2xl border border-border bg-background-elevated ${isMobile ? "mx-auto max-w-sm p-4" : ""}`}>
+              <img
+                src={project.cover}
+                alt={`${project.title} — tela principal`}
+                className={isMobile ? "mx-auto aspect-[9/16] max-h-[760px] w-full rounded-[2rem] object-contain" : "aspect-[16/9] w-full object-cover object-top"}
+              />
+            </div>
+          ) : (
+            <ScreenshotPlaceholder
+              label={`${project.title} — screenshot em breve`}
+              className="aspect-[16/9]"
+            />
+          )}
         </RevealOnScroll>
       </div>
     </section>

@@ -4,15 +4,15 @@ import ProjectShowcase from "./ProjectShowcase";
 
 export default function SelectedProjects() {
   return (
-    <section id="work" className="px-6 py-24 sm:px-8 sm:py-32">
+    <section id="work" className="relative px-5 py-20 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           eyebrow="Trabalho selecionado"
-          title="Produtos que construí"
-          description="Uma seleção de projetos onde atuei do problema à solução em produção — combinando produto, engenharia e, quando faz sentido, Inteligência Artificial."
+          title="Projetos que provam execução"
+          description="Produtos completos, com interface, dados, regras de negócio, integrações e deploy. A ideia aqui é mostrar exatamente o que um recrutador precisa ver: escopo, complexidade e entrega."
         />
 
-        <div className="mt-16 flex flex-col gap-24 sm:gap-32">
+        <div className="mt-12 flex flex-col gap-20 sm:mt-16 sm:gap-32">
           {projects.map((project, i) => (
             <ProjectShowcase
               key={project.slug}

@@ -5,11 +5,11 @@ import TechBadge from "./TechBadge";
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 py-24 sm:px-8 sm:py-32">
+    <section id="experience" className="relative px-5 py-20 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionTitle eyebrow="Trajetória" title="Experiência" />
 
-        <div className="mt-16">
+        <div className="premium-panel mt-12 rounded-[2rem] p-5 sm:mt-16 sm:p-8">
           {experience.length === 0 ? (
             <RevealOnScroll
               delay={0.1}
@@ -20,7 +20,7 @@ export default function Experience() {
               </p>
             </RevealOnScroll>
           ) : (
-            <ol className="relative flex flex-col gap-10 border-l border-border pl-8">
+            <ol className="relative flex flex-col gap-10 border-l border-border pl-6 sm:pl-8">
               {experience.map((item, i) => (
                 <RevealOnScroll
                   as="li"
@@ -29,7 +29,7 @@ export default function Experience() {
                   className="relative"
                 >
                   <span
-                    className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-accent"
+                    className="absolute -left-[calc(1.5rem+7px)] top-1.5 h-3.5 w-3.5 rounded-full border-2 border-background bg-accent shadow-[0_0_0_6px_rgba(59,58,255,0.12)] sm:-left-[calc(2rem+7px)]"
                     aria-hidden="true"
                   />
                   <p className="text-sm font-medium text-accent">{item.period}</p>
@@ -48,11 +48,11 @@ export default function Experience() {
                       item.company
                     )}
                   </h3>
-                  <p className="mt-2 max-w-2xl whitespace-pre-line text-foreground-muted">
+                  <p className="mt-3 max-w-4xl whitespace-pre-line text-foreground-muted">
                     {item.description}
                   </p>
                   {item.technologies?.length > 0 && (
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <div className="mt-5 flex flex-wrap gap-2">
                       {item.technologies.map((tech) => (
                         <TechBadge key={tech}>{tech}</TechBadge>
                       ))}

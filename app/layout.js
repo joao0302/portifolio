@@ -1,4 +1,5 @@
 import { Inter, Manrope } from "next/font/google";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,8 +46,9 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full flex flex-col text-foreground">
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -8,6 +8,8 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import SectionTitle from "@/components/SectionTitle";
 import ProjectHero from "@/components/ProjectHero";
 import ProjectGallery from "@/components/ProjectGallery";
+import ProjectVideo from "@/components/ProjectVideo";
+import ProjectScreenshotShowcase from "@/components/ProjectScreenshotShowcase";
 import ProjectArchitecture from "@/components/ProjectArchitecture";
 import TechBadge from "@/components/TechBadge";
 
@@ -103,6 +105,19 @@ export default function ProjectPage({ params }) {
             </div>
           </div>
         </section>
+
+        {project.demoScreenshots?.length ? (
+          <ProjectScreenshotShowcase project={project} />
+        ) : project.youtubeId ? (
+          <section className="px-6 py-20 sm:px-8">
+            <div className="mx-auto max-w-6xl">
+              <SectionTitle eyebrow="Demonstração" title="Vídeo do projeto" />
+              <RevealOnScroll delay={0.1} className="mt-8">
+                <ProjectVideo youtubeId={project.youtubeId} title={project.title} />
+              </RevealOnScroll>
+            </div>
+          </section>
+        ) : null}
 
         <ProjectArchitecture project={project} variant={ARCHITECTURE_VARIANTS[project.slug]} />
 

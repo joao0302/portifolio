@@ -40,12 +40,42 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 30rem),
+    radial-gradient(circle at 88% 16%, rgba(251, 191, 36, 0.12), transparent 28rem),
+    radial-gradient(circle at 50% 82%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 36rem),
+    radial-gradient(circle at 14% 55%, rgba(236, 72, 153, 0.08), transparent 32rem),
+    linear-gradient(var(--background), var(--background));
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--foreground) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--foreground) 5%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 0, rgba(0, 0, 0, 0.03) 100%);
 }
 
 :focus-visible {
@@ -65,6 +95,21 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .premium-panel {
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.07);
+  }
+
+  .shine-border::before,
+  .shine-icon::before {
+    animation-duration: 4.8s;
   }
 }
 
@@ -90,4 +135,153 @@ body {
 .link-underline:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.premium-panel {
+  border: 1px solid color-mix(in srgb, var(--border) 58%, transparent);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--background-elevated) 72%, transparent), color-mix(in srgb, var(--background) 54%, transparent)),
+    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 22rem);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.grain-overlay {
+  position: relative;
+}
+
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.26;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.55) 0 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px);
+  background-size: 24px 24px, 36px 36px;
+  mix-blend-mode: overlay;
+}
+
+.shine-border {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.shine-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -2;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 80deg,
+    rgba(255, 255, 255, 0.96) 115deg,
+    rgba(139, 139, 255, 0.95) 145deg,
+    transparent 190deg,
+    transparent 360deg
+  );
+  animation: shine-spin 3.2s linear infinite;
+}
+
+.shine-border::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: inherit;
+}
+
+.shine-border-soft::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 75deg,
+    rgba(59, 58, 255, 0.9) 115deg,
+    rgba(255, 255, 255, 0.95) 145deg,
+    transparent 190deg,
+    transparent 360deg
+  );
+}
+
+.shine-icon {
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.shine-icon::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -2;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 80deg,
+    rgba(59, 58, 255, 0.95) 120deg,
+    rgba(255, 255, 255, 0.95) 150deg,
+    transparent 195deg,
+    transparent 360deg
+  );
+  animation: shine-spin 3.2s linear infinite;
+}
+
+.shine-icon::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--background);
+}
+
+.whatsapp-float {
+  animation: whatsapp-breathe 2.4s ease-in-out infinite;
+}
+
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  background: rgba(37, 211, 102, 0.2);
+  z-index: -1;
+  animation: whatsapp-pulse 2.2s ease-out infinite;
+}
+
+@keyframes shine-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(0.82);
+    opacity: 0.8;
+  }
+  70%,
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@keyframes whatsapp-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.03);
+  }
 }

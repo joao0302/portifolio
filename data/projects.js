@@ -25,10 +25,37 @@ const projects = [
     ],
     cover: "/projects/vyral/cover.png",
     screenshots: [
-      "/projects/vyral/screenshot-1.png",
-      "/projects/vyral/screenshot-2.png",
-      "/projects/vyral/screenshot-3.png",
+      {src: "/projects/vyral/home-01.png", title: "Home — hero", description: "Primeira dobra comercial do Vyral."},
+      {src: "/projects/vyral/home-02.png", title: "Home — preview do produto", description: "Demonstração visual dos módulos do sistema."},
+      {src: "/projects/vyral/home-03.png", title: "Home — recursos", description: "Recursos já existentes apresentados para conversão."},
+      {src: "/projects/vyral/home-04.png", title: "Home — operação", description: "Como o Vyral organiza a rotina da agência."},
+      {src: "/projects/vyral/home-05.png", title: "Home — planos e valor", description: "Área comercial e posicionamento SaaS."},
+      {src: "/projects/vyral/home-06.png", title: "Home — chamada final", description: "Fechamento da landing page."},
+      {src: "/projects/vyral/login.png", title: "Login", description: "Autenticação profissional do Vyral."},
+      {src: "/projects/vyral/selecionar-empresa.png", title: "Seleção de cliente", description: "Entrada por cliente atendido pela agência."},
+      {src: "/projects/vyral/dashboard.png", title: "Dashboard", description: "Resumo inteligente e indicadores do cliente."},
+      {src: "/projects/vyral/clientes-crm.png", title: "Clientes CRM", description: "Gestão dos clientes da agência."},
+      {src: "/projects/vyral/cliente-detalhe.png", title: "Área exclusiva do cliente", description: "CRM, Instagram, conteúdos, calendário e arquivos por cliente."},
+      {src: "/projects/vyral/conteudos.png", title: "Redes sociais", description: "Conteúdos e métricas sincronizadas."},
+      {src: "/projects/vyral/calendario.png", title: "Calendário editorial", description: "Planejamento de pautas por cliente."},
+      {src: "/projects/vyral/arquivos.png", title: "Biblioteca", description: "Arquivos de marca organizados por cliente."},
+      {src: "/projects/vyral/tendencias.png", title: "IA de tendências", description: "Sugestões de trends alinhadas ao segmento do cliente."},
+      {src: "/projects/vyral/relatorios.png", title: "Relatórios", description: "Relatórios automáticos com resultados e análises."},
+      {src: "/projects/vyral/equipe.png", title: "Equipe", description: "Gestão de equipe e acessos da agência."},
+      {src: "/projects/vyral/configuracoes.png", title: "Configurações", description: "Conta, agência, segurança e preferências."},
+      {src: "/projects/vyral/admin.png", title: "Painel admin", description: "Controle de agências, planos, trials e feedbacks do SaaS."},
     ],
+    demoScreenshots: [
+      {src: "/projects/vyral/dashboard.png", title: "Dashboard por cliente", description: "Resumo inteligente, crescimento e sinais importantes em uma visão executiva."},
+      {src: "/projects/vyral/clientes-crm.png", title: "CRM de clientes", description: "Cada empresa atendida tem dados, marca, responsáveis e Instagram próprios."},
+      {src: "/projects/vyral/conteudos.png", title: "Conteúdos e métricas", description: "Publicações, alcance, views, engajamento e análise de IA."},
+      {src: "/projects/vyral/calendario.png", title: "Calendário editorial", description: "Pautas por dia, hora e cliente selecionado."},
+      {src: "/projects/vyral/arquivos.png", title: "Biblioteca da marca", description: "Logos, fotos, fontes, paletas e identidade visual por cliente."},
+      {src: "/projects/vyral/tendencias.png", title: "IA de tendências", description: "Trends brasileiras com match para o segmento do cliente."},
+      {src: "/projects/vyral/relatorios.png", title: "Relatórios", description: "Entregáveis para apresentar resultados com clareza."},
+      {src: "/projects/vyral/admin.png", title: "Painel admin SaaS", description: "Visão do dono do produto para controlar agências, planos e trials."},
+    ],
+    youtubeId: null,
     problem:
       "Agências de marketing costumam operar com ferramentas fragmentadas: uma planilha para o CRM, outra para o calendário editorial, relatórios manuais e nenhuma visão unificada da performance de cada cliente nas redes sociais. Isso gera retrabalho, perda de contexto entre equipes e dificuldade para transformar dados brutos em recomendações acionáveis.",
     solution:
@@ -95,7 +122,7 @@ const projects = [
     results:
       "Resultados detalhados em atualização.",
     github: null,
-    demo: "https://vyral-staging.up.railway.app/",
+    demo: "https://vyral.app.br/",
   },
   {
     slug: "dora",
@@ -114,10 +141,16 @@ const projects = [
       "Inteligência Artificial",
       "Processamento de imagem",
     ],
-    cover: "/projects/dora/cover.png",
+    cover: "/projects/dora/cover.jpeg",
+    imageOrientation: "mobile",
     screenshots: [
-      "/projects/dora/screenshot-1.png",
-      "/projects/dora/screenshot-2.png",
+      {src: "/projects/dora/screenshot-1.jpeg", title: "DORA — início", description: "Tela inicial do aplicativo."},
+      {src: "/projects/dora/screenshot-2.jpeg", title: "DORA — catálogo", description: "Experiência mobile para explorar peças."},
+      {src: "/projects/dora/screenshot-3.jpeg", title: "DORA — produto", description: "Detalhes da peça antes da visualização."},
+      {src: "/projects/dora/screenshot-4.jpeg", title: "DORA — provador", description: "Fluxo de pré-visualização com IA."},
+      {src: "/projects/dora/screenshot-5.jpeg", title: "DORA — resultado", description: "Demonstração visual gerada pelo app."},
+      {src: "/projects/dora/screenshot-6.jpeg", title: "DORA — navegação", description: "Interface mobile do produto."},
+      {src: "/projects/dora/screenshot-7.jpeg", title: "DORA — experiência", description: "Jornada visual do usuário dentro do app."},
     ],
     problem:
       "É difícil visualizar como uma peça de roupa vai ficar em você apenas olhando a foto do produto em uma loja online, o que gera insegurança na hora da compra e aumenta a taxa de devolução.",
@@ -154,18 +187,18 @@ const projects = [
     results:
       "Resultados detalhados em atualização.",
     github: null,
-    demo: null,
+    demo: "https://apps.apple.com/br/app/dora/id6741698497",
   },
   {
     slug: "legisia",
     title: "LegisIA",
     tagline:
-      "Plataforma GovTech que usa IA para transcrever e resumir sessões legislativas.",
+      "Plataforma de Inteligência Artificial para assessoria e fiscalização legislativa municipal.",
     category: "SaaS • GovTech • Inteligência Artificial",
     year: "2024",
-    role: "Desenvolvimento full stack da plataforma e do pipeline de processamento de vídeo e IA.",
+    role: "Desenvolvimento full stack da plataforma: backend, frontend, integração com IA e arquitetura multi-Câmara.",
     description:
-      "LegisIA é uma plataforma que aplica inteligência artificial ao trabalho legislativo, processando vídeos de sessões, extraindo áudio, gerando transcrições e resumos automáticos para apoiar câmaras municipais em uma estrutura multi-tenant.",
+      "LegisIA é uma plataforma que aplica Inteligência Artificial ao trabalho legislativo municipal: assessoria via chat sobre Regimento Interno e Lei Orgânica, fiscalização de contratos e licitações, análise de proposições (constitucionalidade, jurisprudência, veto, competência) e cruzamento de dados públicos, atendendo múltiplas Câmaras Municipais em uma estrutura multi-tenant.",
     technologies: [
       "React",
       "Vite",
@@ -173,53 +206,76 @@ const projects = [
       "Node.js",
       "Express",
       "PostgreSQL",
-      "OpenAI API",
-      "FFmpeg",
+      "Prisma",
+      "Anthropic Claude API",
+      "Mercado Pago API",
     ],
     cover: "/projects/legisia/cover.png",
     screenshots: [
-      "/projects/legisia/screenshot-1.png",
-      "/projects/legisia/screenshot-2.png",
+      {src: "/projects/legisia/login.png", title: "Login", description: "Acesso seguro à plataforma de inteligência parlamentar."},
+      {src: "/projects/legisia/trial.png", title: "Teste grátis", description: "Fluxo de cadastro para avaliação da plataforma."},
+      {src: "/projects/legisia/dashboard.png", title: "Meu Plano", description: "Controle de assinatura, recursos disponíveis e consultas com IA."},
+      {src: "/projects/legisia/regimental.png", title: "Assessoria regimental", description: "Chat jurídico baseado no Regimento Interno e na Lei Orgânica."},
+      {src: "/projects/legisia/proposicao.png", title: "Proposição inteligente", description: "Análise de projetos antes do protocolo legislativo."},
+      {src: "/projects/legisia/fiscalizacao-ranking.png", title: "Fiscalização", description: "Ranking de fornecedores e leitura de contratos públicos."},
+      {src: "/projects/legisia/fiscalizacao-alertas.png", title: "Alertas", description: "Detecção de anomalias e pontos de atenção para fiscalização."},
+      {src: "/projects/legisia/fiscalizacao-cruzamento.png", title: "Cruzamento de dados", description: "Cruzamento com dados públicos, TCE e Judiciário."},
+      {src: "/projects/legisia/admin.png", title: "Painel administrativo", description: "Gestão de clientes, planos e acessos da plataforma."},
+    ],
+    demoScreenshots: [
+      {src: "/projects/legisia/dashboard.png", title: "Plano e consumo", description: "Acompanhe consultas, dias restantes e recursos liberados."},
+      {src: "/projects/legisia/regimental.png", title: "Consulta jurídica", description: "Assessoria parlamentar em formato de chat com IA."},
+      {src: "/projects/legisia/proposicao.png", title: "Análise legislativa", description: "Apoio para revisar proposições, competência e fundamentos."},
+      {src: "/projects/legisia/fiscalizacao-ranking.png", title: "Fiscalização de contratos", description: "Visualize fornecedores, valores e concentração contratual."},
+      {src: "/projects/legisia/fiscalizacao-alertas.png", title: "Alertas inteligentes", description: "Identifique anomalias e sinais de risco automaticamente."},
+      {src: "/projects/legisia/admin.png", title: "Administração SaaS", description: "Gerencie Câmaras, planos e operação da plataforma."},
     ],
     problem:
-      "Sessões legislativas geram horas de vídeo que raramente são revisadas na íntegra, tornando difícil localizar informações específicas, produzir atas e dar transparência ao processo legislativo de forma acessível.",
+      "Vereadores e equipes legislativas precisam consultar constantemente o Regimento Interno, a Lei Orgânica e dados de fiscalização (contratos, licitações, TCE) de seu município, além de avaliar a constitucionalidade e a jurisprudência de proposições — um trabalho manual, disperso entre fontes diferentes e que consome tempo das equipes de cada Câmara.",
     solution:
-      "LegisIA processa os vídeos das sessões, extrai o áudio, gera transcrições e produz resumos automáticos com IA, disponibilizando tudo em uma plataforma com autenticação e suporte a múltiplas câmaras (multi-tenant).",
+      "LegisIA concentra essa assessoria em uma plataforma com IA: um chat especializado responde consultas com base no Regimento Interno e na Lei Orgânica do município do usuário, um módulo de fiscalização cruza dados de contratos, licitações (via PNCP) e TCE para gerar rankings, alertas e detecção de anomalias, e um módulo de proposições analisa constitucionalidade, competência, jurisprudência e veto. Tudo isso dentro de uma arquitetura multi-Câmara, com cada município (atualmente Sanharó-PE, Pesqueira-PE e Cortês-PE) mantendo sua própria base jurídica isolada.",
     features: [
       {
-        title: "Processamento de vídeo",
+        title: "Assessoria regimental via IA",
         description:
-          "Ingestão de gravações de sessões legislativas para extração de áudio via FFmpeg.",
+          "Chat com IA que responde consultas com base no Regimento Interno e na Lei Orgânica do município do usuário.",
       },
       {
-        title: "Transcrição automática",
+        title: "Análise de proposições",
         description:
-          "Conversão do áudio extraído em texto transcrito da sessão.",
+          "Verificação de constitucionalidade, competência, jurisprudência e veto de proposições legislativas.",
       },
       {
-        title: "Resumos gerados por IA",
+        title: "Fiscalização",
         description:
-          "Geração automática de resumos a partir da transcrição completa da sessão.",
-      },
-      {
-        title: "Histórico",
-        description:
-          "Registro e consulta de sessões processadas anteriormente.",
-      },
-      {
-        title: "Autenticação",
-        description:
-          "Controle de acesso de usuários à plataforma.",
+          "Consulta de contratos e licitações (integração com o PNCP), ranking de empresas, alertas e detecção de anomalias, com cruzamento de dados do TCE.",
       },
       {
         title: "Estrutura multi-Câmara",
         description:
-          "Suporte a múltiplas câmaras legislativas de forma isolada (multi-tenant).",
+          "Cada Câmara Municipal atendida (Sanharó-PE, Pesqueira-PE, Cortês-PE) mantém sua base jurídica e seus dados isolados dentro da mesma plataforma.",
+      },
+      {
+        title: "Planos e assinatura",
+        description:
+          "Quatro modalidades de acesso (Trial, Básico, Profissional, Avançado) com limite mensal de consultas, liberação progressiva de recursos e pagamento via Mercado Pago.",
+      },
+      {
+        title: "Painel administrativo",
+        description:
+          "Área de administração para gestão de clientes, planos e acompanhamento de uso da plataforma.",
       },
     ],
-    architecture: ["Vídeo", "FFmpeg", "Áudio", "Transcrição", "IA", "Resumo", "Plataforma"],
+    architecture: [
+      "Câmara Municipal",
+      "Regimento Interno + Lei Orgânica",
+      "IA (Claude)",
+      "Assessoria + Análise de Proposições",
+      "Fiscalização (Contratos, Licitações, TCE)",
+      "Plataforma multi-Câmara",
+    ],
     challenges:
-      "Construir um pipeline confiável de processamento de vídeo e áudio com FFmpeg, lidar com arquivos de mídia longos de forma performática e estruturar o isolamento de dados entre diferentes câmaras na mesma plataforma.",
+      "Estruturar a base jurídica de cada município (Regimento Interno e Lei Orgânica) de forma isolada e escalável para múltiplas Câmaras, e desenhar o sistema de planos e permissões que controla, por assinatura, quais recursos de IA e fiscalização cada cliente pode consumir.",
     results:
       "Resultados detalhados em atualização.",
     github: null,

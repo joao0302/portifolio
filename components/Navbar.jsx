@@ -35,7 +35,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-background/85 backdrop-blur border-b border-border"
+          ? "bg-background/55 backdrop-blur-xl border-b border-border/60"
           : "bg-transparent border-b border-transparent"
       }`}
     >
