@@ -8,6 +8,34 @@ import ScreenshotPlaceholder from "./ScreenshotPlaceholder";
 import TechBadge from "./TechBadge";
 
 const PROJECT_HIGHLIGHTS = {
+  seruvo: {
+    badge: "PaaS em produção",
+    secondary: "Deploy · Containers · Cloud",
+    gradient:
+      "radial-gradient(circle_at_20%_20%,rgba(52,211,153,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(34,211,238,0.12),transparent_30%)",
+    bullets: [
+      "🚀 Deploy via GitHub",
+      "🐳 Orquestração com Docker",
+      "🗄️ PostgreSQL gerenciado",
+      "🔒 Domínios e SSL/TLS",
+    ],
+    recruiter:
+      "Mostra domínio de infraestrutura e produto: do painel em React à automação de deploy, persistência, proxy reverso e operação de serviços em produção.",
+  },
+  voltty: {
+    badge: "SaaS real em produção",
+    secondary: "Varejo · Gestão · Fidelização",
+    gradient:
+      "radial-gradient(circle_at_20%_20%,rgba(124,92,255,0.2),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(45,212,191,0.13),transparent_30%)",
+    bullets: [
+      "🛒 PDV e estoque integrados",
+      "📈 Balanço financeiro",
+      "🏷️ Etiquetas Code 128",
+      "💜 CRM e fidelização",
+    ],
+    recruiter:
+      "Mostra capacidade de transformar regras complexas do varejo em um produto SaaS multiempresa coeso, com dados operacionais reais e experiência pronta para o dia a dia.",
+  },
   vyral: {
     badge: "SaaS real em produção",
     secondary: "Multiempresa · IA · Instagram",
@@ -251,7 +279,7 @@ export default function ProjectShowcase({ project, index, reverse = false }) {
         </div>
 
         {showProjectLink ? (
-          project.demo ? (
+          project.demo && !project.preferCaseStudy ? (
             <a
               href={project.demo}
               target="_blank"

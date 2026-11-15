@@ -9,7 +9,6 @@ export default function ProjectGallery({project}) {
   const screenshots = project.screenshots || [];
   const [index, setIndex] = useState(0);
   const isMobile = project.imageOrientation === "mobile";
-  if (!screenshots.length) return null;
 
   const items = screenshots.map((shot, i) => ({
     src: typeof shot === "string" ? shot : shot.src,
@@ -26,6 +25,8 @@ export default function ProjectGallery({project}) {
     }, 4200);
     return () => window.clearInterval(timer);
   }, [items.length]);
+
+  if (!screenshots.length) return null;
 
   return (
     <section className="px-6 py-20 sm:px-8">

@@ -5,6 +5,178 @@
 
 const projects = [
   {
+    slug: "seruvo",
+    title: "Seruvo",
+    tagline:
+      "Plataforma PaaS para publicar, configurar e operar aplicações em nuvem com uma experiência centralizada.",
+    category: "PaaS • DevOps • Cloud Computing",
+    year: "2026",
+    role: "Idealização, desenvolvimento full stack e implementação da infraestrutura da plataforma.",
+    description:
+      "Seruvo é uma plataforma de hospedagem e gerenciamento de aplicações em nuvem criada para simplificar deploy, configuração e monitoramento. Em um único painel, desenvolvedores organizam projetos, serviços, bancos de dados, variáveis de ambiente, domínios e ambientes de produção.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Fastify",
+      "Zod",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Docker",
+      "Nginx Proxy Manager",
+      "SSL/TLS",
+    ],
+    cover: "/projects/seruvo/cover.png",
+    screenshots: [
+      {
+        src: "/projects/seruvo/cover.png",
+        title: "Workspace e projetos",
+        description: "Visão centralizada dos projetos, repositórios e serviços em produção.",
+      },
+      {
+        src: "/projects/seruvo/projeto-canvas.png",
+        title: "Canvas de infraestrutura",
+        description: "Aplicações e bancos de dados conectados visualmente por dependências e variáveis.",
+      },
+      {
+        src: "/projects/seruvo/infraestrutura.png",
+        title: "Monitoramento da plataforma",
+        description: "Acompanhamento de CPU, memória, disco e workspaces hospedados.",
+      },
+    ],
+    demoScreenshots: [
+      {
+        src: "/projects/seruvo/cover.png",
+        title: "Projetos em um só workspace",
+        description: "Organização de aplicações, repositórios, ambientes e status dos serviços.",
+      },
+      {
+        src: "/projects/seruvo/projeto-canvas.png",
+        title: "Topologia visual",
+        description: "Leitura imediata da relação entre frontend, backend e PostgreSQL.",
+      },
+      {
+        src: "/projects/seruvo/infraestrutura.png",
+        title: "Operação e capacidade",
+        description: "Métricas reais da máquina e administração dos workspaces da plataforma.",
+      },
+    ],
+    problem:
+      "Publicar uma aplicação moderna costuma exigir domínio de containers, proxy reverso, certificados, bancos de dados, persistência e automação de deploy. Essa fragmentação aumenta o tempo operacional e cria uma barreira para desenvolvedores e empresas que só precisam colocar seus produtos no ar com segurança.",
+    solution:
+      "O Seruvo concentra o ciclo de implantação em uma interface única: integra repositórios do GitHub, executa serviços isolados em Docker, provisiona PostgreSQL persistente, gerencia variáveis de ambiente e conecta domínios com SSL/TLS. A plataforma também oferece controles de reinicialização, atualização, backup e acompanhamento da infraestrutura.",
+    features: [
+      {
+        title: "Deploy integrado ao GitHub",
+        description: "Publicação e atualização de aplicações diretamente a partir dos repositórios.",
+      },
+      {
+        title: "Projetos e ambientes",
+        description: "Organização de aplicações, serviços e ambientes em um workspace centralizado.",
+      },
+      {
+        title: "PostgreSQL gerenciado",
+        description: "Provisionamento de bancos persistentes com recursos de backup e restauração.",
+      },
+      {
+        title: "Domínios e SSL/TLS",
+        description: "Configuração de domínios personalizados e certificados para acesso seguro.",
+      },
+      {
+        title: "Variáveis de ambiente",
+        description: "Configuração centralizada e isolada para cada aplicação implantada.",
+      },
+      {
+        title: "Infraestrutura containerizada",
+        description: "Execução e isolamento de aplicações com Docker e gerenciamento de serviços.",
+      },
+    ],
+    architecture: [
+      "GitHub",
+      "Pipeline de deploy",
+      "Containers Docker",
+      "Aplicações e serviços",
+      "PostgreSQL persistente",
+      "Nginx Proxy Manager",
+      "Domínio + SSL/TLS",
+      "Monitoramento e backups",
+    ],
+    challenges:
+      "Orquestrar containers e persistência com segurança, automatizar a publicação de diferentes stacks, conectar serviços e bancos sem expor credenciais e manter domínios, certificados e métricas operacionais acessíveis por uma interface simples.",
+    results:
+      "Uma infraestrutura PaaS funcional que reduz tarefas manuais de DevOps e permite administrar aplicações, bancos e domínios em um fluxo visual único, do repositório à produção.",
+    github: null,
+    demo: null,
+  },
+  {
+    slug: "voltty",
+    title: "Voltty",
+    tagline:
+      "Plataforma SaaS para vendas, estoque, gestão financeira e fidelização de clientes de negócios locais.",
+    category: "SaaS • Varejo • Gestão e Fidelização",
+    year: "2026",
+    role: "Idealização, desenvolvimento full stack, modelagem de dados e implantação da plataforma SaaS.",
+    description:
+      "Voltty é uma plataforma SaaS multiempresa que reúne frente de caixa, produtos, estoque, etiquetas, balanço financeiro e relacionamento com clientes. O produto conecta a operação diária da loja a recursos de fidelização, como CRM, cupons, campanhas, avaliações e QR Codes.",
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT",
+      "Docker",
+      "API do WhatsApp",
+    ],
+    cover: "/projects/voltty/cover.png",
+    screenshots: [
+      {src: "/projects/voltty/vendas.png", title: "Caixa e vendas", description: "PDV com leitor de etiquetas, carrinho, pagamentos, fiado e trocas."},
+      {src: "/projects/voltty/produtos.png", title: "Produtos e estoque", description: "Catálogo, variações, custos, preços e alertas de estoque baixo."},
+      {src: "/projects/voltty/balanco.png", title: "Balanço da loja", description: "Faturamento, lucro, despesas, metas e formas de pagamento."},
+      {src: "/projects/voltty/etiquetas.png", title: "Etiquetas", description: "Geração de códigos Code 128 vinculados a produto, tamanho e estoque."},
+      {src: "/projects/voltty/clientes.png", title: "CRM de clientes", description: "Preferências, compras, visitas e oportunidades de relacionamento."},
+      {src: "/projects/voltty/fidelizacao.png", title: "Cupons segmentados", description: "Benefícios para boas-vindas, aniversariantes e clientes inativos."},
+    ],
+    demoScreenshots: [
+      {src: "/projects/voltty/vendas.png", title: "Operação de vendas", description: "Fluxo de caixa preparado para etiquetas, múltiplos pagamentos, fiado e trocas."},
+      {src: "/projects/voltty/produtos.png", title: "Estoque em tempo real", description: "Indicadores financeiros e alertas para apoiar reposição e precificação."},
+      {src: "/projects/voltty/balanco.png", title: "Decisão financeira", description: "Metas, faturamento, lucro e despesas reunidos em um painel gerencial."},
+      {src: "/projects/voltty/clientes.png", title: "Relacionamento conectado", description: "Histórico de clientes e dados de compra integrados à fidelização."},
+    ],
+    problem:
+      "Negócios locais frequentemente usam ferramentas separadas para vender, controlar estoque, acompanhar resultados e manter relacionamento com clientes. A fragmentação reduz a visibilidade da operação e faz oportunidades de recompra, aniversário e recuperação de clientes se perderem.",
+    solution:
+      "O Voltty une operação e relacionamento em uma única plataforma multiempresa. A venda atualiza estoque e indicadores financeiros; os dados de clientes alimentam CRM, segmentações, cupons e campanhas; etiquetas e QR Codes conectam a rotina física da loja ao sistema digital.",
+    features: [
+      {title: "Frente de caixa", description: "Vendas com leitor de etiquetas, formas de pagamento, fiado, despesas e trocas."},
+      {title: "Produtos e estoque", description: "Cadastro de peças e variações, custos, preços e alertas de estoque baixo."},
+      {title: "Balanço financeiro", description: "Faturamento, lucro bruto e líquido, despesas, metas e relatórios por período."},
+      {title: "Etiquetas Code 128", description: "Códigos vinculados a cada produto, tamanho e quantidade disponível."},
+      {title: "CRM e fidelização", description: "Clientes, preferências, visitas, cupons, campanhas e avaliações em um só fluxo."},
+      {title: "SaaS multiempresa", description: "Autenticação, isolamento de dados, planos e administração central da plataforma."},
+    ],
+    architecture: [
+      "Loja e operadores",
+      "Aplicação React",
+      "API Node.js/Express",
+      "Autenticação JWT",
+      "PostgreSQL multiempresa",
+      "Vendas + Estoque + Financeiro",
+      "CRM + Fidelização",
+      "Integrações e campanhas",
+    ],
+    challenges:
+      "Garantir isolamento seguro entre empresas, manter estoque e indicadores financeiros consistentes a cada venda, modelar variações e etiquetas por produto e conectar dados operacionais a segmentações de relacionamento sem duplicar fontes de verdade.",
+    results:
+      "Um sistema de gestão completo em produção, com operação real de caixa, mais de mil peças controladas no ambiente demonstrado e uma camada de fidelização conectada ao histórico de clientes.",
+    github: null,
+    demo: "https://voltty.com.br/",
+    preferCaseStudy: true,
+  },
+  {
     slug: "vyral",
     title: "Vyral",
     tagline:

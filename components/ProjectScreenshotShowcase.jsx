@@ -8,7 +8,6 @@ import SectionTitle from "./SectionTitle";
 export default function ProjectScreenshotShowcase({project}) {
   const shots = project.demoScreenshots || project.screenshots || [];
   const [index, setIndex] = useState(0);
-  if (!shots.length) return null;
 
   const current = shots[index];
   const isMobile = project.imageOrientation === "mobile";
@@ -21,6 +20,8 @@ export default function ProjectScreenshotShowcase({project}) {
     }, 4200);
     return () => window.clearInterval(timer);
   }, [shots.length]);
+
+  if (!shots.length) return null;
 
   return (
     <section className="px-6 py-20 sm:px-8">
