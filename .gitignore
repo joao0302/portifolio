@@ -5,3 +5,7 @@ out
 !.env.example
 npm-debug.log*
 .tmp
+.open-next
+.wrangler
+.dev.vars*
+!.dev.vars.example
