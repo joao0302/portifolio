@@ -7,9 +7,9 @@ export default function SelectedProjects() {
     <section id="work" className="relative px-5 py-20 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          eyebrow="Trabalho selecionado"
-          title="Projetos que provam execução"
-          description="Produtos completos, com interface, dados, regras de negócio, integrações e deploy — do conceito inicial à experiência final em produção."
+          eyebrow="Portfólio"
+          title="Projetos selecionados"
+          description="Sistemas web e mobile desenvolvidos da arquitetura à publicação, com foco em produto, operação e manutenção."
         />
 
         <div className="mt-12 flex flex-col gap-20 sm:mt-16 sm:gap-32">

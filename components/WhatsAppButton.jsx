@@ -10,18 +10,17 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Conversar pelo WhatsApp"
-      className="whatsapp-float grid place-items-center rounded-full text-white transition hover:scale-110"
+      className="grid place-items-center rounded-full text-white transition-opacity hover:opacity-90"
       style={{
         position: "fixed",
         right: "clamp(14px, 4vw, 22px)",
         bottom: "clamp(14px, 4vw, 22px)",
         zIndex: 2147483647,
-        width: "clamp(56px, 14vw, 64px)",
-        height: "clamp(56px, 14vw, 64px)",
+        width: "clamp(50px, 12vw, 56px)",
+        height: "clamp(50px, 12vw, 56px)",
         background: "#25D366",
-        border: "4px solid #ffffff",
-        boxShadow:
-          "0 18px 45px rgba(37, 211, 102, 0.42), 0 8px 18px rgba(0,0,0,0.12)",
+        border: "1px solid rgba(255,255,255,0.72)",
+        boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
       }}
     >
       <svg viewBox="0 0 32 32" aria-hidden="true" className="h-8 w-8 fill-current">

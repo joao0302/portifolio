@@ -174,7 +174,6 @@ const projects = [
       "Um sistema de gestão completo em produção, com operação real de caixa, mais de mil peças controladas no ambiente demonstrado e uma camada de fidelização conectada ao histórico de clientes.",
     github: null,
     demo: "https://voltty.com.br/",
-    preferCaseStudy: true,
   },
   {
     slug: "vyral",
@@ -290,9 +289,9 @@ const projects = [
     challenges:
       "Modelar uma estrutura de dados multiagência e multicliente que fosse segura e escalável, orquestrar a coleta e normalização de métricas de redes sociais, e desenhar um pipeline de IA capaz de transformar dados brutos em recomendações compreensíveis para usuários não técnicos.",
     results:
-      "Resultados detalhados em atualização.",
+      "A plataforma consolidou CRM, planejamento, ativos de marca, métricas e relatórios em uma única operação multiagência, reduzindo a dependência de ferramentas isoladas.",
     github: null,
-    demo: "https://vyral.app.br/",
+    demo: null,
   },
   {
     slug: "dora",
@@ -355,7 +354,7 @@ const projects = [
     challenges:
       "Integrar o app Flutter a uma API externa de produtos, orquestrar o envio de imagens para o processamento por IA e manter a experiência fluida em dispositivos móveis mesmo durante o processamento assíncrono da visualização.",
     results:
-      "Resultados detalhados em atualização.",
+      "O aplicativo foi publicado na App Store e apresenta uma jornada mobile completa, da consulta ao catálogo até o processamento e exibição do resultado visual.",
     github: null,
     demo: "https://apps.apple.com/br/app/dora/id6741698497",
   },
@@ -447,7 +446,7 @@ const projects = [
     challenges:
       "Estruturar a base jurídica de cada município (Regimento Interno e Lei Orgânica) de forma isolada e escalável para múltiplas Câmaras, e desenhar o sistema de planos e permissões que controla, por assinatura, quais recursos de IA e fiscalização cada cliente pode consumir.",
     results:
-      "Resultados detalhados em atualização.",
+      "A solução reúne consulta jurídica, análise de proposições e fiscalização em uma arquitetura preparada para atender diferentes Câmaras Municipais com dados isolados.",
     github: null,
     demo: null,
   },

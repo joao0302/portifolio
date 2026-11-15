@@ -63,7 +63,7 @@ export default async function ProjectPage({ params }) {
         <section className="px-6 py-20 sm:px-8">
           <div className="mx-auto max-w-6xl grid grid-cols-1 gap-16 lg:grid-cols-2">
             <RevealOnScroll>
-              <SectionTitle eyebrow="Visão geral" title="Overview" />
+              <SectionTitle eyebrow="Visão geral" title="Sobre o projeto" />
               <p className="mt-6 text-base leading-relaxed text-foreground-muted">
                 {project.description}
               </p>

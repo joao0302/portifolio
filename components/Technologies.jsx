@@ -36,7 +36,7 @@ export default function Technologies() {
         <SectionTitle
           eyebrow="Stack"
           title="Tecnologias"
-          description="Ferramentas que uso para construir produtos completos: interface, lógica, banco, integrações, mobile e IA."
+          description="Tecnologias utilizadas nos projetos apresentados e no trabalho diário."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ export default function Technologies() {
             <RevealOnScroll
               key={group.title}
               delay={i * 0.05}
-              className="premium-panel rounded-3xl p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_90px_rgba(0,0,0,0.12)]"
+              className="premium-panel rounded-3xl p-5"
             >
               <h3 className="font-display text-lg font-semibold text-foreground">
                 {group.title}

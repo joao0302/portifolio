@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-border/70 to-transparent" />
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-sm text-foreground-muted">
-          João Paulo — Software Developer · © {year}
+          João Paulo Freitas · Desenvolvedor de software · © {year}
         </p>
 
         <div className="flex items-center gap-5">

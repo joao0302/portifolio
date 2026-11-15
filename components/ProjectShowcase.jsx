@@ -9,74 +9,64 @@ import TechBadge from "./TechBadge";
 
 const PROJECT_HIGHLIGHTS = {
   seruvo: {
-    badge: "PaaS em produção",
-    secondary: "Deploy · Containers · Cloud",
-    gradient:
-      "radial-gradient(circle_at_20%_20%,rgba(52,211,153,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(34,211,238,0.12),transparent_30%)",
+    status: "Produto próprio",
+    focus: "Infraestrutura e DevOps",
     bullets: [
-      "🚀 Deploy via GitHub",
-      "🐳 Orquestração com Docker",
-      "🗄️ PostgreSQL gerenciado",
-      "🔒 Domínios e SSL/TLS",
+      "Deploy via GitHub",
+      "Orquestração com Docker",
+      "PostgreSQL gerenciado",
+      "Domínios e SSL/TLS",
     ],
-    recruiter:
-      "Mostra domínio de infraestrutura e produto: do painel em React à automação de deploy, persistência, proxy reverso e operação de serviços em produção.",
+    summary:
+      "Painel, API e infraestrutura desenvolvidos para automatizar deploy, persistência, proxy reverso e operação de serviços.",
   },
   voltty: {
-    badge: "SaaS real em produção",
-    secondary: "Varejo · Gestão · Fidelização",
-    gradient:
-      "radial-gradient(circle_at_20%_20%,rgba(124,92,255,0.2),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(45,212,191,0.13),transparent_30%)",
+    status: "Produto em produção",
+    focus: "Gestão para varejo",
     bullets: [
-      "🛒 PDV e estoque integrados",
-      "📈 Balanço financeiro",
-      "🏷️ Etiquetas Code 128",
-      "💜 CRM e fidelização",
+      "PDV e estoque integrados",
+      "Balanço financeiro",
+      "Etiquetas Code 128",
+      "CRM e fidelização",
     ],
-    recruiter:
-      "Mostra capacidade de transformar regras complexas do varejo em um produto SaaS multiempresa coeso, com dados operacionais reais e experiência pronta para o dia a dia.",
+    summary:
+      "Plataforma multiempresa que conecta vendas, estoque, financeiro e relacionamento com clientes em uma única operação.",
   },
   vyral: {
-    badge: "SaaS real em produção",
-    secondary: "Multiempresa · IA · Instagram",
-    gradient:
-      "radial-gradient(circle_at_20%_20%,rgba(96,165,250,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(251,146,60,0.16),transparent_30%)",
+    status: "Produto SaaS",
+    focus: "Operação de agências",
     bullets: [
-      "🏢 Arquitetura multiagência",
-      "📊 Dashboards por cliente",
-      "🤖 IA com consumo por plano",
-      "🔐 Autenticação e permissões",
+      "Arquitetura multiagência",
+      "Dashboards por cliente",
+      "IA com consumo por plano",
+      "Autenticação e permissões",
     ],
-    recruiter:
-      "Mostra domínio de produto SaaS ponta a ponta: autenticação, banco, planos, limites, dashboards, admin e integrações externas.",
+    summary:
+      "CRM, conteúdo, relatórios e dados de redes sociais organizados em uma arquitetura multiagência e multicliente.",
   },
   dora: {
-    badge: "Mobile app com IA",
-    secondary: "Flutter · API · experiência visual",
-    gradient:
-      "radial-gradient(circle_at_20%_20%,rgba(236,72,153,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(96,165,250,0.16),transparent_30%)",
+    status: "Aplicativo mobile",
+    focus: "Moda e visão computacional",
     bullets: [
-      "📱 Experiência mobile",
-      "🧠 IA aplicada à imagem",
-      "🛍️ Catálogo via API",
-      "⚡ Fluxo assíncrono",
+      "Aplicativo em Flutter",
+      "IA aplicada à imagem",
+      "Catálogo via API",
+      "Processamento assíncrono",
     ],
-    recruiter:
-      "Mostra capacidade de construir produto mobile completo, integrar APIs e aplicar IA em uma experiência simples para usuário final.",
+    summary:
+      "Aplicativo publicado para consulta de produtos e simulação visual de roupas a partir da foto do usuário.",
   },
   legisia: {
-    badge: "GovTech com IA",
-    secondary: "Legislativo municipal",
-    gradient:
-      "radial-gradient(circle_at_20%_20%,rgba(96,165,250,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(251,191,36,0.12),transparent_30%)",
+    status: "Plataforma GovTech",
+    focus: "Legislativo municipal",
     bullets: [
-      "⚖️ Chat jurídico com IA",
-      "🔍 Fiscalização de contratos",
-      "📋 Análise de proposições",
-      "🏛️ Multi-Câmara",
+      "Consulta regimental com IA",
+      "Fiscalização de contratos",
+      "Análise de proposições",
+      "Arquitetura multi-Câmara",
     ],
-    recruiter:
-      "Mostra maturidade para lidar com domínio complexo, regras de negócio sensíveis, dados públicos e IA aplicada a decisões legislativas.",
+    summary:
+      "Base jurídica, dados públicos e ferramentas de análise reunidos em uma plataforma isolada por Câmara Municipal.",
   },
 };
 
@@ -85,12 +75,12 @@ export default function ProjectShowcase({ project, index, reverse = false }) {
   const highlight = PROJECT_HIGHLIGHTS[project.slug];
   const previewShots = useMemo(
     () =>
-      [
+      [...new Set([
         project.cover,
         ...(project.screenshots || []).map((shot) =>
           typeof shot === "string" ? shot : shot.src
         ),
-      ].filter(Boolean),
+      ].filter(Boolean))],
     [project.cover, project.screenshots]
   );
   const [shotIndex, setShotIndex] = useState(0);
@@ -213,23 +203,16 @@ export default function ProjectShowcase({ project, index, reverse = false }) {
       </div>
 
       <div className="relative min-w-0">
-        {highlight ? (
-          <div
-            className="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem] blur-sm sm:-inset-6"
-            style={{ background: highlight.gradient }}
-          />
-        ) : null}
-
         <span className="font-mono text-sm text-accent">{number}</span>
 
         {highlight ? (
-          <div className="mt-3 max-w-xl rounded-3xl border border-accent/20 bg-background-elevated/80 p-4 shadow-[0_24px_80px_rgba(59,58,255,0.12)] backdrop-blur sm:p-6">
+          <div className="mt-3 max-w-xl border-t border-border pt-5">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <span className="shine-border inline-flex rounded-full bg-accent px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent-foreground sm:text-[11px] sm:tracking-[0.18em]">
-                {highlight.badge}
+              <span className="inline-flex rounded-full border border-border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-foreground sm:text-[11px] sm:tracking-[0.18em]">
+                {highlight.status}
               </span>
-              <span className="rounded-full border border-border bg-background px-3 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-foreground-muted sm:text-[11px] sm:tracking-[0.14em]">
-                {highlight.secondary}
+              <span className="text-[10px] font-medium uppercase tracking-[0.12em] text-foreground-muted sm:text-[11px] sm:tracking-[0.14em]">
+                {highlight.focus}
               </span>
             </div>
             <p className="text-xs font-medium uppercase tracking-wide text-accent sm:text-sm">
@@ -242,16 +225,15 @@ export default function ProjectShowcase({ project, index, reverse = false }) {
               {project.tagline}
             </p>
 
-            <div className="mt-5 rounded-2xl border border-border bg-background/80 p-4 text-sm leading-relaxed text-foreground-muted">
-              <span className="font-semibold text-foreground">Por que chama atenção:</span>{" "}
-              {highlight.recruiter}
+            <div className="mt-5 border-l-2 border-accent pl-4 text-sm leading-relaxed text-foreground-muted">
+              {highlight.summary}
             </div>
 
             <div className="mt-4 grid gap-2 text-sm text-foreground-muted sm:grid-cols-2">
               {highlight.bullets.map((item) => (
                 <span
                   key={item}
-                  className="rounded-2xl border border-border bg-background px-4 py-3"
+                  className="border-b border-border py-2.5"
                 >
                   {item}
                 </span>
@@ -279,25 +261,13 @@ export default function ProjectShowcase({ project, index, reverse = false }) {
         </div>
 
         {showProjectLink ? (
-          project.demo && !project.preferCaseStudy ? (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground"
-            >
-              Ver projeto
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          ) : (
-            <Link
-              href={`/work/${project.slug}`}
-              className="link-underline mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground"
-            >
-              Ver projeto
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          )
+          <Link
+            href={`/work/${project.slug}`}
+            className="link-underline mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground"
+          >
+            Ver projeto
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         ) : null}
       </div>
     </RevealOnScroll>

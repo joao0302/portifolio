@@ -5,7 +5,7 @@ const PRINCIPLES = [
   {
     title: "Autonomia",
     description:
-      "Consigo sair de uma ideia vaga, estruturar o produto e transformar isso em software funcionando.",
+      "Organizo requisitos, defino a solução técnica e acompanho a implementação até a entrega.",
   },
   {
     title: "Ponta a ponta",
@@ -15,7 +15,7 @@ const PRINCIPLES = [
   {
     title: "Visão de negócio",
     description:
-      "Não penso só no código; penso em uso, clareza, venda, manutenção e evolução do produto.",
+      "Considero uso, clareza, manutenção e evolução do produto nas decisões técnicas.",
   },
 ];
 
@@ -33,20 +33,20 @@ export default function About() {
             <div className="space-y-5 text-base leading-relaxed text-foreground-muted sm:text-lg">
               <p>
                 Sou João Paulo, desenvolvedor de software focado em construir
-                produtos digitais completos — não apenas telas. Trabalho em
-                aplicações Web, Mobile e SaaS, cuidando da experiência de ponta
-                a ponta: da arquitetura de dados à interface final.
+                produtos digitais. Trabalho em aplicações web, mobile e SaaS,
+                participando da arquitetura, modelagem de dados, implementação
+                da interface e publicação.
               </p>
               <p>
-                Tenho interesse particular em integrar Inteligência Artificial
-                de forma útil aos produtos que construo, transformando dados e
-                processos manuais em experiências mais inteligentes e
-                automatizadas.
+                Também desenvolvo integrações com serviços de inteligência
+                artificial quando elas atendem a uma necessidade concreta do
+                produto, como análise de dados, automação e processamento de
+                imagens.
               </p>
               <p>
-                Gosto de trabalhar próximo do problema real do usuário, sempre
-                buscando equilíbrio entre qualidade técnica, simplicidade e
-                velocidade de entrega.
+                Trabalho próximo às regras de negócio e aos usuários para
+                equilibrar qualidade técnica, simplicidade de uso e prazo de
+                entrega.
               </p>
             </div>
 
