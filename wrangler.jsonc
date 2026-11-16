@@ -8,12 +8,6 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page"
   },
-  "routes": [
-    {
-      "pattern": "jpfreitasdev.com.br",
-      "custom_domain": true
-    }
-  ],
   "observability": {
     "enabled": true
   }
