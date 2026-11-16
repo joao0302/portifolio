@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "portifolio",
+  "main": "worker.js",
   "compatibility_date": "2026-11-15",
   "assets": {
-    "directory": "out"
+    "directory": "out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
   },
   "observability": {
     "enabled": true
