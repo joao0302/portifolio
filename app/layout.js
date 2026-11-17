@@ -12,30 +12,30 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://joaopaulo.dev";
+const siteUrl = "https://jpfreitasdev.com.br";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "João Paulo | Software Developer",
+    default: "João Paulo Freitas | Desenvolvedor de software",
     template: "%s | João Paulo",
   },
   description:
-    "Desenvolvedor de software especializado em aplicações Web, Mobile, SaaS e soluções utilizando Inteligência Artificial.",
+    "Portfólio de João Paulo Freitas, desenvolvedor full stack de aplicações web, mobile e produtos SaaS.",
   openGraph: {
-    title: "João Paulo | Software Developer",
+    title: "João Paulo Freitas | Desenvolvedor de software",
     description:
-      "Desenvolvedor de software especializado em aplicações Web, Mobile, SaaS e soluções utilizando Inteligência Artificial.",
+      "Projetos web, mobile e SaaS desenvolvidos da arquitetura à publicação.",
     url: siteUrl,
-    siteName: "João Paulo",
+    siteName: "João Paulo Freitas",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "João Paulo | Software Developer",
+    title: "João Paulo Freitas | Desenvolvedor de software",
     description:
-      "Desenvolvedor de software especializado em aplicações Web, Mobile, SaaS e soluções utilizando Inteligência Artificial.",
+      "Projetos web, mobile e SaaS desenvolvidos da arquitetura à publicação.",
   },
 };
 
@@ -47,6 +47,9 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col text-foreground">
+        <a href="#conteudo-principal" className="skip-link">
+          Pular para o conteúdo principal
+        </a>
         {children}
         <WhatsAppButton />
       </body>
