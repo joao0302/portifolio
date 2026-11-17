@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }) {
   return (
     <>
       <Navbar />
-      <main className="flex-1">
+      <main id="conteudo-principal" className="flex-1" tabIndex={-1}>
         <ProjectHero project={project} />
 
         <section className="px-6 py-20 sm:px-8">

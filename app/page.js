@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-1">
+      <main id="conteudo-principal" className="flex-1" tabIndex={-1}>
         <Hero />
         <SelectedProjects />
         <About />
